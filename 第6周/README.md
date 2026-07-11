@@ -1,59 +1,59 @@
-# 大项目第6周作业
+# Week 6 Assignment for the Large Project
 
-## 任务说明
+## Task Description
 
-本项目实现了一个基于西班牙语关键词的用户状态检测模块，用于识别学习过程中的四种主要困难状态：
+This project implements a user state detection module based on Spanish keywords to identify four main difficulty states during the learning process:
 
-- `cannot_start`：不会开始
-- `concept_confusion`：不理解概念
-- `stuck_on_step`：卡步骤
-- `expression_difficulty`：表达困难
+- `cannot_start`: unable to begin
+- `concept_confusion`: does not understand the concept
+- `stuck_on_step`: stuck at a step
+- `expression_difficulty`: difficulty expressing ideas
 
-## 运行方式
+## How to Run
 
-1. 安装依赖（可选，默认纯 Python 无额外依赖）：
+1. Install dependencies (optional; the default setup uses pure Python with no extra dependencies):
    ```bash
    python -m pip install -r requirements.txt
    ```
-2. 运行主程序：
+2. Run the main program:
    ```bash
    python main.py
    ```
-3. 输入 `exit` 或 `quit` 退出程序。
+3. Enter `exit` or `quit` to exit the program.
 
-## 核心逻辑
+## Core Logic
 
-- 将关键词配置存放在 `state_keywords.json`，便于后续维护。
-- `detect_state(text)` 返回一个包含：
-  - `primary_state`：最优先处理的主状态
-  - `matched_states`：所匹配到的所有状态
-  - 当输入为空或无匹配时，返回错误说明。
+- Keyword settings are stored in `state_keywords.json` for easier maintenance.
+- `detect_state(text)` returns a result containing:
+  - `primary_state`: the highest-priority main state
+  - `matched_states`: all states that were matched
+  - When the input is empty or no match is found, it returns an error message.
 
-## 测试
+## Tests
 
-运行测试：
+Run the tests:
 
 ```bash
 python -m pytest
 ```
 
-测试覆盖了：
+The tests cover:
 
-- 空输入验证
-- 四种状态识别
-- 多状态输入优先级
-- 无关文本返回无状态
-- 关键词配置文件存在性检查
+- empty input validation
+- recognition of the four states
+- priority handling for multi-state input
+- unrelated text returning no state
+- existence check for the keyword configuration file
 
-## 已知限制
+## Known Limitations
 
-- 当前匹配为基于关键词的简单规则，不包含机器学习。
-- 真实问卷场景中可能需要更丰富的语料覆盖和上下文理解。
-- 如果一个输入同时匹配多种状态，当前按严格优先级返回主状态。
+- The current matching is a simple keyword-based rule system and does not include machine learning.
+- In real questionnaire scenarios, broader corpus coverage and context understanding may be needed.
+- If one input matches multiple states, the current implementation returns the primary state according to a strict priority order.
 
-## 第7周接入建议
+## Suggestions for Week 7 Integration
 
-后续可将 `detect_state()` 的返回结构接入 `decide_action(state)`：
+You can later connect the return structure of `detect_state()` to `decide_action(state)`:
 
 ```python
 result = detect_state(user_input)
