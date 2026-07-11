@@ -1,0 +1,43 @@
+{
+  "cannot_start": [
+    "empezar",
+    "inicio",
+    "primer paso",
+    "cómo empezar",
+    "no sé cómo empezar",
+    "no tengo ni idea",
+    "hint",
+    "por dónde empezar",
+    "no sé por dónde empezar"
+  ],
+  "concept_confusion": [
+    "qué es",
+    "significa",
+    "concepto",
+    "definición",
+    "no entiendo",
+    "me explicas",
+    "problema matemáticas",
+    "asignatura redes"
+  ],
+  "stuck_on_step": [
+    "siguiente",
+    "después",
+    "luego",
+    "seguir",
+    "cómo seguir",
+    "cómo sigo",
+    "cómo se sigue",
+    "luego cómo se sigue"
+  ],
+  "expression_difficulty": [
+    "cómo se dice",
+    "cómo decir",
+    "palabras",
+    "frase",
+    "no sé expresarlo",
+    "no sé cómo decirlo",
+    "cómo expresarlo",
+    "explicar lo"
+  ]
+}
